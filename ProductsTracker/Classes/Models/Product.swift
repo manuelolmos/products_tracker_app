@@ -14,7 +14,7 @@ class Product: NSObject {
     var prize: Double
     var date: String
     var seller: String
-    
+
     init(name: String, prize: Double, date: String, seller: String) {
         self.name = name
         self.prize = prize

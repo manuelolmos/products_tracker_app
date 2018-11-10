@@ -12,20 +12,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var productTableView: UITableView!
     var products = [Product]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.products = MockDataHelper().mockProductsData()
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ProductTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductTableViewCell
+        let cell: ProductTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProductCell")
+            as! ProductTableViewCell
+        // swiftlint:disable:previous force_cast
         cell.setupUI(product: self.products[indexPath.row])
         return cell
     }
 }
-

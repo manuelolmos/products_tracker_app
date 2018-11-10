@@ -8,6 +8,7 @@
 
 import XCTest
 
+// swiftlint:disable all
 class ProductsTrackerUITests: XCTestCase {
 
     override func setUp() {
