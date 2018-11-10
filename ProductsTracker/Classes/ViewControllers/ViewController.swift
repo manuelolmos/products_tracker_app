@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.products = MockDataHelper().mockProductsData()
+        self.products = MockDataHelper().mockProductsDataFromJson()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

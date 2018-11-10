@@ -17,6 +17,7 @@
 		AF5A0BE721969BE400CA1A3F /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A0BE621969BE400CA1A3F /* ProductTableViewCell.swift */; };
 		AF5A0BE921969CB700CA1A3F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A0BE821969CB700CA1A3F /* Product.swift */; };
 		AF5A0BEC21969F5E00CA1A3F /* MockDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A0BEB21969F5E00CA1A3F /* MockDataHelper.swift */; };
+		AF5A0BF02196AA4C00CA1A3F /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = AF5A0BEF2196AA4C00CA1A3F /* products.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		AF5A0BE621969BE400CA1A3F /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		AF5A0BE821969CB700CA1A3F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AF5A0BEB21969F5E00CA1A3F /* MockDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataHelper.swift; sourceTree = "<group>"; };
+		AF5A0BEF2196AA4C00CA1A3F /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		AF5A0BD92196983000CA1A3F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF5A0BEE2196AA4C00CA1A3F /* MockData */,
 				AF5A0BDA2196983000CA1A3F /* Assets.xcassets */,
 				AF5A0BDB2196983000CA1A3F /* LaunchScreen.storyboard */,
 				AF5A0BDD2196983000CA1A3F /* Main.storyboard */,
@@ -188,6 +191,14 @@
 				AF5A0BEB21969F5E00CA1A3F /* MockDataHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AF5A0BEE2196AA4C00CA1A3F /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				AF5A0BEF2196AA4C00CA1A3F /* products.json */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF5A0BE32196983000CA1A3F /* Main.storyboard in Resources */,
+				AF5A0BF02196AA4C00CA1A3F /* products.json in Resources */,
 				AF5A0BE12196983000CA1A3F /* Assets.xcassets in Resources */,
 				AF5A0BE22196983000CA1A3F /* LaunchScreen.storyboard in Resources */,
 			);
