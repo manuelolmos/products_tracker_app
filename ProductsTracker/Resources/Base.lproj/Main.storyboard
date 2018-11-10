@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ksE-X9-Fsa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ksE-X9-Fsa">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -56,14 +56,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Z06-fZ-NnJ" firstAttribute="width" secondItem="4hk-YK-ZTN" secondAttribute="width" multiplier="75/375" id="4vJ-a3-fr2"/>
-                                                <constraint firstItem="GwM-V5-s4h" firstAttribute="width" secondItem="4hk-YK-ZTN" secondAttribute="width" multiplier="100/375" id="5ro-la-2G8"/>
                                                 <constraint firstItem="m85-ym-r7Z" firstAttribute="leading" secondItem="Z06-fZ-NnJ" secondAttribute="trailing" id="7P8-S0-cxW"/>
                                                 <constraint firstItem="m85-ym-r7Z" firstAttribute="centerY" secondItem="EaF-kT-xQ9" secondAttribute="centerY" id="Bfo-Hf-4Ly"/>
                                                 <constraint firstItem="EaF-kT-xQ9" firstAttribute="width" secondItem="4hk-YK-ZTN" secondAttribute="width" multiplier="100/375" id="DU5-1A-Spt"/>
                                                 <constraint firstItem="m85-ym-r7Z" firstAttribute="width" secondItem="4hk-YK-ZTN" secondAttribute="width" multiplier="75/375" id="GLn-zP-bAl"/>
-                                                <constraint firstItem="GwM-V5-s4h" firstAttribute="leading" secondItem="m85-ym-r7Z" secondAttribute="trailing" id="OLA-IA-522"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="GwM-V5-s4h" secondAttribute="trailing" constant="15" id="T32-fQ-ArY"/>
                                                 <constraint firstItem="EaF-kT-xQ9" firstAttribute="centerY" secondItem="4hk-YK-ZTN" secondAttribute="centerY" id="XJV-Sh-A0h"/>
+                                                <constraint firstItem="GwM-V5-s4h" firstAttribute="leading" secondItem="m85-ym-r7Z" secondAttribute="trailing" id="eiy-f0-8AN"/>
+                                                <constraint firstAttribute="trailing" secondItem="GwM-V5-s4h" secondAttribute="trailing" constant="15" id="hOw-o2-gRA"/>
                                                 <constraint firstItem="EaF-kT-xQ9" firstAttribute="leading" secondItem="4hk-YK-ZTN" secondAttribute="leading" constant="10" id="hbJ-hp-Jlf"/>
                                                 <constraint firstItem="Z06-fZ-NnJ" firstAttribute="leading" secondItem="EaF-kT-xQ9" secondAttribute="trailing" id="rx7-C1-zhw"/>
                                                 <constraint firstItem="Z06-fZ-NnJ" firstAttribute="centerY" secondItem="EaF-kT-xQ9" secondAttribute="centerY" id="ugc-Eo-9EU"/>
