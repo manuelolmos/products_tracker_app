@@ -1,0 +1,8 @@
+excluded:
+  - ProductsTracker/Classes/AppDelegate/AppDelegate.swift
+  - ProductsTrackerUITests/*
+
+file_length:
+  warning: 300
+  error: 400
+
