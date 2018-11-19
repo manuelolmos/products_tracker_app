@@ -8,17 +8,50 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var productTableView: UITableView!
-    var products = [Product]()
+    private let searchController = UISearchController(searchResultsController: nil)
+    fileprivate var products = [Product]()
+    fileprivate var filteredProducts = [Product]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.products = MockDataHelper().mockProductsDataFromJson()
+        products = MockDataHelper().mockProductsDataFromJson()
+        setupSearchController()
     }
 
+    private func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search products"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+
+    private func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+
+    private func filterContentForSearchText(_ searchText: String) {
+        filteredProducts = products.filter({( product: Product) -> Bool in
+            return product.name.lowercased().contains(searchText.lowercased())
+        })
+        productTableView.reloadData()
+    }
+
+    private func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredProducts.count
+        }
         return products.count
     }
 
@@ -26,7 +59,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell: ProductTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProductCell")
             as! ProductTableViewCell
         // swiftlint:disable:previous force_cast
-        cell.setupUI(product: self.products[indexPath.row])
+        let product: Product
+        if isFiltering() {
+            product = filteredProducts[indexPath.row]
+        } else {
+            product = products[indexPath.row]
+        }
+        cell.setupUI(product: product)
         return cell
+    }
+}
+
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
     }
 }
