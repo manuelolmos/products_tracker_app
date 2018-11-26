@@ -67,33 +67,33 @@
                                 <rect key="frame" x="0.0" y="132" width="375" height="646"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="sNC-Bv-oGC" customClass="ProductTableViewCell" customModule="ProductsTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProductCell" id="sNC-Bv-oGC" customClass="ProductTableViewCell" customModule="ProductsTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sNC-Bv-oGC" id="4hk-YK-ZTN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-kT-xQ9">
-                                                    <rect key="frame" x="10" y="11.333333333333336" width="100" height="21"/>
+                                                    <rect key="frame" x="10" y="11.333333333333336" width="91.333333333333329" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z06-fZ-NnJ">
-                                                    <rect key="frame" x="110" y="11.333333333333336" width="75" height="21"/>
+                                                    <rect key="frame" x="101.33333333333334" y="11.333333333333336" width="68.333333333333343" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m85-ym-r7Z">
-                                                    <rect key="frame" x="185" y="11.333333333333336" width="75" height="21"/>
+                                                    <rect key="frame" x="169.66666666666666" y="11.333333333333336" width="68.333333333333343" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrefour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwM-V5-s4h">
-                                                    <rect key="frame" x="260" y="11.333333333333336" width="100" height="21"/>
+                                                    <rect key="frame" x="238" y="11.333333333333336" width="89" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -148,6 +148,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2015" y="-681"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="cIK-CU-Xa0">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailVC" id="B0q-ol-q7v" customClass="ProductDetailViewController" customModule="ProductsTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NpS-dG-L12">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDs-m2-mvg">
+                                <rect key="frame" x="166.66666666666666" y="154" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6L-Pp-bw1">
+                                <rect key="frame" x="166.66666666666666" y="195" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib4-Xd-Jlg">
+                                <rect key="frame" x="166.66666666666666" y="236" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QDs-m2-mvg" firstAttribute="centerX" secondItem="bqa-yT-V3j" secondAttribute="centerX" id="0JE-ju-OXJ"/>
+                            <constraint firstItem="Ib4-Xd-Jlg" firstAttribute="top" secondItem="i6L-Pp-bw1" secondAttribute="bottom" constant="20" id="2Qk-EL-O3Q"/>
+                            <constraint firstItem="i6L-Pp-bw1" firstAttribute="centerX" secondItem="QDs-m2-mvg" secondAttribute="centerX" id="B7r-lu-7qG"/>
+                            <constraint firstItem="i6L-Pp-bw1" firstAttribute="top" secondItem="QDs-m2-mvg" secondAttribute="bottom" constant="20" id="geZ-ey-ojV"/>
+                            <constraint firstItem="Ib4-Xd-Jlg" firstAttribute="centerX" secondItem="i6L-Pp-bw1" secondAttribute="centerX" id="rdl-Gq-bEm"/>
+                            <constraint firstItem="QDs-m2-mvg" firstAttribute="centerY" secondItem="bqa-yT-V3j" secondAttribute="centerY" multiplier="0.4" id="zgo-08-b7d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bqa-yT-V3j"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wE8-Xo-Y2p"/>
+                    <connections>
+                        <outlet property="productDate" destination="QDs-m2-mvg" id="yoT-K6-oME"/>
+                        <outlet property="productPrize" destination="i6L-Pp-bw1" id="vk6-Sz-sS0"/>
+                        <outlet property="productSeller" destination="Ib4-Xd-Jlg" id="jUo-y5-zfF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ga-9q-Ga4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2967" y="-645"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NoY-1S-KDy">

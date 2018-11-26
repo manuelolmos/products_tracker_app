@@ -68,6 +68,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setupUI(product: product)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let productDetailVC = storyboard.instantiateViewController(withIdentifier: "ProductDetailVC")
+            as? ProductDetailViewController {
+            let product = self.products[indexPath.row]
+            productDetailVC.setupUI(product: product)
+            self.navigationController?.pushViewController(productDetailVC, animated: true)
+        }
+    }
 }
 
 extension ViewController: UISearchResultsUpdating {

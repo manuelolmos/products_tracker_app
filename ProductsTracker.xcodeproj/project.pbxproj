@@ -18,6 +18,7 @@
 		AF5A0BE921969CB700CA1A3F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A0BE821969CB700CA1A3F /* Product.swift */; };
 		AF5A0BEC21969F5E00CA1A3F /* MockDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A0BEB21969F5E00CA1A3F /* MockDataHelper.swift */; };
 		AF5A0BF02196AA4C00CA1A3F /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = AF5A0BEF2196AA4C00CA1A3F /* products.json */; };
+		AFEB8BBC21AB9CE700463131 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB8BBB21AB9CE700463131 /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AF5A0BE821969CB700CA1A3F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AF5A0BEB21969F5E00CA1A3F /* MockDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataHelper.swift; sourceTree = "<group>"; };
 		AF5A0BEF2196AA4C00CA1A3F /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		AFEB8BBB21AB9CE700463131 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5A0BD62196983000CA1A3F /* ViewController.swift */,
+				AFEB8BBB21AB9CE700463131 /* ProductDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				AF5A0BDF2196983000CA1A3F /* ViewController.swift in Sources */,
 				AF5A0BE721969BE400CA1A3F /* ProductTableViewCell.swift in Sources */,
 				AF5A0BEC21969F5E00CA1A3F /* MockDataHelper.swift in Sources */,
+				AFEB8BBC21AB9CE700463131 /* ProductDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
