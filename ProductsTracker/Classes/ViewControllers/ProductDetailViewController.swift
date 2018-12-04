@@ -19,9 +19,9 @@ class ProductDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.requestProduct(productId: self.productId, completion: { (product: Product?) in
-            self.product = product
-            self.setupUI()
+        self.requestProduct(productId: self.productId, completion: { [weak self] (product: Product?) in
+            self?.product = product
+            self?.setupUI()
         })
     }
 

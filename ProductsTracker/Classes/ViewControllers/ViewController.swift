@@ -18,10 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
-        ProductAPI.getAllProducts { (products: [Product]?) in
+        ProductAPI.getAllProducts { [weak self] (products: [Product]?) in
             if let productsArray = products {
-                self.products = productsArray
-                self.productTableView.reloadData()
+                self?.products = productsArray
+                self?.productTableView.reloadData()
             }
         }
     }
