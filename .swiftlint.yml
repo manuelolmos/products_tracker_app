@@ -1,6 +1,7 @@
 excluded:
   - ProductsTracker/Classes/AppDelegate/AppDelegate.swift
   - ProductsTrackerUITests/*
+  - Carthage/*
 
 file_length:
   warning: 300

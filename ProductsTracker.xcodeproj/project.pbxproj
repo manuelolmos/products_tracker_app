@@ -18,6 +18,10 @@
 		AF5A0BE921969CB700CA1A3F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A0BE821969CB700CA1A3F /* Product.swift */; };
 		AF5A0BEC21969F5E00CA1A3F /* MockDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A0BEB21969F5E00CA1A3F /* MockDataHelper.swift */; };
 		AF5A0BF02196AA4C00CA1A3F /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = AF5A0BEF2196AA4C00CA1A3F /* products.json */; };
+		AF801E6D21B5FC63005C85FA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF801E6C21B5FC63005C85FA /* Alamofire.framework */; };
+		AF801E7421B605A1005C85FA /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF801E7221B605A1005C85FA /* AlamofireObjectMapper.framework */; };
+		AF801E7521B605A1005C85FA /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF801E7321B605A1005C85FA /* ObjectMapper.framework */; };
+		AF801E7821B60FFA005C85FA /* ProductAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF801E7721B60FFA005C85FA /* ProductAPI.swift */; };
 		AFEB8BBC21AB9CE700463131 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB8BBB21AB9CE700463131 /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,13 @@
 		AF5A0BE821969CB700CA1A3F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AF5A0BEB21969F5E00CA1A3F /* MockDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataHelper.swift; sourceTree = "<group>"; };
 		AF5A0BEF2196AA4C00CA1A3F /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		AF801E6A21B5FC51005C85FA /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		AF801E6C21B5FC63005C85FA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		AF801E6E21B60599005C85FA /* AlamofireObjectMapper.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = AlamofireObjectMapper.framework.dSYM; path = Carthage/Build/iOS/AlamofireObjectMapper.framework.dSYM; sourceTree = "<group>"; };
+		AF801E6F21B60599005C85FA /* ObjectMapper.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ObjectMapper.framework.dSYM; path = Carthage/Build/iOS/ObjectMapper.framework.dSYM; sourceTree = "<group>"; };
+		AF801E7221B605A1005C85FA /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		AF801E7321B605A1005C85FA /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		AF801E7721B60FFA005C85FA /* ProductAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAPI.swift; sourceTree = "<group>"; };
 		AFEB8BBB21AB9CE700463131 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF801E6D21B5FC63005C85FA /* Alamofire.framework in Frameworks */,
+				AF801E7421B605A1005C85FA /* AlamofireObjectMapper.framework in Frameworks */,
+				AF801E7521B605A1005C85FA /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +105,7 @@
 				AF5A0BBA2196970300CA1A3F /* ProductsTrackerTests */,
 				AF5A0BC52196970300CA1A3F /* ProductsTrackerUITests */,
 				AF5A0BA42196970200CA1A3F /* Products */,
+				AF801E6921B5FC50005C85FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +150,7 @@
 		AF5A0BD42196983000CA1A3F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF801E7621B60FE2005C85FA /* API */,
 				AF5A0BEA21969F5300CA1A3F /* Helpers */,
 				AF5A0BE521969BC900CA1A3F /* Models */,
 				AF5A0BE421969BC900CA1A3F /* Views */,
@@ -204,6 +220,27 @@
 			path = MockData;
 			sourceTree = "<group>";
 		};
+		AF801E6921B5FC50005C85FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF801E7221B605A1005C85FA /* AlamofireObjectMapper.framework */,
+				AF801E7321B605A1005C85FA /* ObjectMapper.framework */,
+				AF801E6E21B60599005C85FA /* AlamofireObjectMapper.framework.dSYM */,
+				AF801E6F21B60599005C85FA /* ObjectMapper.framework.dSYM */,
+				AF801E6C21B5FC63005C85FA /* Alamofire.framework */,
+				AF801E6A21B5FC51005C85FA /* Alamofire.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF801E7621B60FE2005C85FA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AF801E7721B60FFA005C85FA /* ProductAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +252,7 @@
 				AF5A0BA02196970200CA1A3F /* Frameworks */,
 				AF5A0BA12196970200CA1A3F /* Resources */,
 				AF5A0BED2196A40300CA1A3F /* ShellScript */,
+				AF801E6821B5FB40005C85FA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -350,6 +388,26 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 		};
+		AF801E6821B5FB40005C85FA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -360,6 +418,7 @@
 				AF5A0BE02196983000CA1A3F /* AppDelegate.swift in Sources */,
 				AF5A0BE921969CB700CA1A3F /* Product.swift in Sources */,
 				AF5A0BDF2196983000CA1A3F /* ViewController.swift in Sources */,
+				AF801E7821B60FFA005C85FA /* ProductAPI.swift in Sources */,
 				AF5A0BE721969BE400CA1A3F /* ProductTableViewCell.swift in Sources */,
 				AF5A0BEC21969F5E00CA1A3F /* MockDataHelper.swift in Sources */,
 				AFEB8BBC21AB9CE700463131 /* ProductDetailViewController.swift in Sources */,
@@ -539,6 +598,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4D398WLJVB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ProductsTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -557,6 +620,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4D398WLJVB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ProductsTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

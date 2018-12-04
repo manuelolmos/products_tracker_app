@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class Product: NSObject {
+class Product: Mappable {
 
-    var name: String
-    var prize: Double
-    var date: String
-    var seller: String
+    var name: String?
+    var prize: Double?
+    var date: String?
+    var seller: String?
+
+    required init?(map: Map) {}
+
+    func mapping(map: Map) {
+        name <- map["name"]
+        prize <- map["prize"]
+        date <- map["date"]
+        seller <- map["seller"]
+    }
 
     init?(dictionary: [String: Any]?) {
         guard let dict = dictionary, let name = dict["name"] as? String,

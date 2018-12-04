@@ -17,8 +17,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        products = MockDataHelper().mockProductsDataFromJson()
         setupSearchController()
+        ProductAPI.getAllProducts { (products: [Product]?) in
+            if let productsArray = products {
+                self.products = productsArray
+                self.productTableView.reloadData()
+            }
+        }
     }
 
     private func setupSearchController() {
@@ -35,7 +40,11 @@ class ViewController: UIViewController {
 
     private func filterContentForSearchText(_ searchText: String) {
         filteredProducts = products.filter({( product: Product) -> Bool in
-            return product.name.lowercased().contains(searchText.lowercased())
+            var validProduct = false
+            if let name = product.name {
+                validProduct = name.lowercased().contains(searchText.lowercased())
+            }
+            return validProduct
         })
         productTableView.reloadData()
     }
@@ -43,7 +52,6 @@ class ViewController: UIViewController {
     private func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
     }
-
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -74,7 +82,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         if let productDetailVC = storyboard.instantiateViewController(withIdentifier: "ProductDetailVC")
             as? ProductDetailViewController {
             let product = self.products[indexPath.row]
-            productDetailVC.setupUI(product: product)
+            productDetailVC.productId = product.name
             self.navigationController?.pushViewController(productDetailVC, animated: true)
         }
     }
